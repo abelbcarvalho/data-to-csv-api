@@ -14,6 +14,11 @@ permissions:
 
 jobs:
   build:
+    env:
+      # the environment variables
+      APP: ${{ secrets.APP }}
+      HOST: ${{ secrets.HOST }}
+      PORT: ${{ secrets.PORT }}
 
     runs-on: ubuntu-latest
 
