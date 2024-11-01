@@ -19,9 +19,8 @@ json_success = [
     )
 ]
 
-csv_success = (
-    'name,age,gender,occupation\r\n'
-    'paula,23,female,scientist\r\n'
-    'maria,25,female,developer\r\n'
-    'joseph,20,male,lawyer\r\n'
-)
+csv_success = """name,age,gender,occupation\r
+paula,23,female,scientist\r
+maria,25,female,developer\r
+joseph,20,male,lawyer\r
+"""
