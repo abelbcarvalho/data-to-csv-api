@@ -68,6 +68,7 @@ Here you can find the package's project structure:
 src/
 ├──controllers/
 ├──core/
+├──exceptions/
 ├──routes/
 ├──services/
 ├──use_cases/
