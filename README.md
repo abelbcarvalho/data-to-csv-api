@@ -69,6 +69,7 @@ src/
 ├──controllers/
 ├──core/
 ├──exceptions/
+├──prototypes/
 ├──routes/
 ├──services/
 ├──use_cases/
