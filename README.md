@@ -68,12 +68,17 @@ Here you can find the package's project structure:
 src/
 ├──controllers/
 ├──core/
+├──exceptions/
+├──prototypes/
 ├──routes/
 ├──services/
 ├──use_cases/
 ├──utilities/
 tests/
 ├──mocks/
+├──src/
+├──├──core/
+├──├──services/
 .gitignore
 app.py
 LICENSE
