@@ -76,6 +76,9 @@ src/
 ├──utilities/
 tests/
 ├──mocks/
+├──src/
+├──├──core/
+├──├──services/
 .gitignore
 app.py
 LICENSE
