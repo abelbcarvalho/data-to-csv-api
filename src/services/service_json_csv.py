@@ -1,9 +1,9 @@
 from src.exceptions.exceptions import ModelInvalid
-from src.prototypes.inter_service_json_csv import InterServiceJsonCsv
+from src.prototypes.prototype_service_json_csv import PrototypeServiceJsonCsv
 from src.use_cases.use_case_json_to_csv import UseCaseJsonToCsv
 
 
-class ServiceJsonCSV(InterServiceJsonCsv):
+class ServiceJsonCSV(PrototypeServiceJsonCsv):
     def __init__(self) -> None:
         self.use_case = UseCaseJsonToCsv()
 
