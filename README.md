@@ -88,7 +88,11 @@ README.md
 ```
 
 ## Routes
+At this section, I present you all HTTP requests routes for this project.
 
----
+| Method | Route URL | Description | Request                                              |
+|--------|-----------|-------------|------------------------------------------------------|
+| POST   | /api/v1/json-csv/file | Transform an object list to csv file format | [json to csv](docs/RequestBody.md#json-to-csv-route) |
+
 That's all Folks!
 [Go Ahead](#data-to-csv-api)
