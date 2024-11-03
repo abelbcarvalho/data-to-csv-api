@@ -80,6 +80,7 @@ tests/
 ├──├──core/
 ├──├──routes/
 ├──├──services/
+├──├──utilities/
 .gitignore
 app.py
 LICENSE
