@@ -17,8 +17,7 @@ class ControllerJsonCSV(PrototypeControllerJsonCSV):
 
     async def json_to_csv_swap(self, request: Request) -> StreamingResponse:
         try:
-            self.body = await request.json()
-            await self.__valid_body__()
+            await self.__valid_body__(request)
 
             csv_file = await self.service.json_to_csv_swap(self.body)
 
@@ -31,6 +30,11 @@ class ControllerJsonCSV(PrototypeControllerJsonCSV):
         finally:
             self.body = any("")
 
-    async def __valid_body__(self) -> None:
+    async def __valid_body__(self, request: Request) -> None:
+        if not Checkers.is_json_invalid(request.json()):
+            raise RequestException("request json cannot be null or empty")
+
+        self.body = await request.json()
+
         if not Checkers.is_list_dicts(self.body):
-            raise RequestException("request body must be a list of dicts")
+            raise RequestException("request json must be a list of dicts")
