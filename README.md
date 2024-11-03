@@ -78,6 +78,7 @@ tests/
 ├──mocks/
 ├──src/
 ├──├──core/
+├──├──routes/
 ├──├──services/
 .gitignore
 app.py
