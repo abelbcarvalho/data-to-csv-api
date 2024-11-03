@@ -31,10 +31,10 @@ class ControllerJsonCSV(PrototypeControllerJsonCSV):
             self.body = any("")
 
     async def __valid_body__(self, request: Request) -> None:
-        if not Checkers.is_json_invalid(request.json()):
-            raise RequestException("request json cannot be null or empty")
-
         self.body = await request.json()
+
+        if Checkers.is_json_invalid(self.body):
+            raise RequestException("request json cannot be null or empty")
 
         if not Checkers.is_list_dicts(self.body):
             raise RequestException("request json must be a list of dicts")
