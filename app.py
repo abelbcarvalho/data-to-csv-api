@@ -1,14 +1,18 @@
 from os import environ
+from sys import prefix
+
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from src.routes.route_json_csv import route_json_csv
+
 # loading environment variables
 load_dotenv()
 
 # creating app
-app = FastAPI(prefix="/api/v1")
+app = FastAPI()
 
 # configuring cors
 origins = [
@@ -32,7 +36,7 @@ host_str = environ.get("HOST")
 port_int = int(environ.get("PORT"))
 
 # adding routes
-# app.add_route(route)
+app.include_router(route_json_csv)
 
 
 if __name__ == '__main__':
