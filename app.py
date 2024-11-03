@@ -1,5 +1,4 @@
 from os import environ
-from sys import prefix
 
 import uvicorn
 from dotenv import load_dotenv
